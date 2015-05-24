@@ -29,10 +29,10 @@ class TokenController < BaseController
     end
 
     if @user.errors.any?
-      render :show,
+      render users_path,
              :status => 422
     else
-      render :show
+      render users_path
     end
   end
   
