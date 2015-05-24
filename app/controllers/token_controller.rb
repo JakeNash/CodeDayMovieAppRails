@@ -11,7 +11,8 @@ class TokenController < BaseController
 
     if !params_present?
       if !params[:user][:email]
-        @user.errors.add(:email, 'not present') 
+        @user.errors.add(:email, 'not present')
+      end
       @user.errors.add(:password, 'not present') if !params[:user][:password]
     end
 
