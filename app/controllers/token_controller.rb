@@ -38,7 +38,7 @@ class TokenController < BaseController
 
   def params_present?
     user = params[:user]
-    user and user.is_a?(HashWithIndifferentAccess) and user[:email] and user[:password]
+    user and user[:email] and user[:password]
   end
 
 end
