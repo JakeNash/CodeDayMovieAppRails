@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users
+  
+  post "token" => "token#create"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
