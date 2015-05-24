@@ -32,7 +32,7 @@ class TokenController < BaseController
       render "/",
              :status => 422
     else
-      redirect_to(@book)
+      redirect_to(@user)
     end
   end
   
