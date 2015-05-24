@@ -33,6 +33,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Added for Account Verification
 gem 'devise'
 
+# Added for Search Functions
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
