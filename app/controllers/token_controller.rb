@@ -29,10 +29,10 @@ class TokenController < BaseController
     end
 
     if @user.errors.any?
-      render users_path,
+      render "/",
              :status => 422
     else
-      render users_path
+      redirect_to(@book)
     end
   end
   
