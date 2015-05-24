@@ -1,5 +1,5 @@
 if @user.errors.any?
-  json.exception 'Api::V2::AuthError'
+  json.exception 'AuthError'
   json.message 'Unauthorized: Incorrect email or password'
   json.errors json_error(@user)[:errors]
 else
