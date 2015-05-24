@@ -10,7 +10,8 @@ class TokenController < BaseController
     @user = User.new
 
     if !params_present?
-      @user.errors.add(:email, 'not present') if !params[:user][:email]
+      if !params[:user][:email]
+        @user.errors.add(:email, 'not present') 
       @user.errors.add(:password, 'not present') if !params[:user][:password]
     end
 
