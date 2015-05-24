@@ -29,10 +29,10 @@ class TokenController < BaseController
     end
 
     if @user.errors.any?
-      render "/",
+      render :show,
              :status => 422
     else
-      redirect_to(@user)
+      render :show
     end
   end
   

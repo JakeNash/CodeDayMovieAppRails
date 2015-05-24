@@ -1,0 +1,11 @@
+if @user.errors.any?
+  json.exception 'Api::V2::AuthError'
+  json.message 'Unauthorized: Incorrect email or password'
+  json.errors json_error(@user)[:errors]
+else
+  json.authentication_token @user.authentication_token
+  json.user do |json|
+    json.(@user, :id, :first_name, :last_name, :email, :last_organization_id)
+    json.image_url full_image_url(@user.image_url)
+  end
+end
