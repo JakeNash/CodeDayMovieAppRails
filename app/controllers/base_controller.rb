@@ -17,7 +17,7 @@ class BaseController < ApplicationController
 
   # before_action :set_x_organization_header
 
-  has_scope :page, default: 1
+  # has_scope :page, default: 1
 
   def cors_preflight_check
     if request.method == 'OPTIONS'
