@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users
-  
+
+  match "*all" => "base#cors_preflight_check", :via => [:options]
   post "token" => "token#create"
 
   # Example of regular route:
